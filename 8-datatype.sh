@@ -7,3 +7,7 @@ NUM3=sandeep
 SUM=$((NUM1+NUM3))
 
 echo $SUM
+
+FRUITS=("ORANGES" "APPLES" "MANGO")
+
+echo $FRUITS
