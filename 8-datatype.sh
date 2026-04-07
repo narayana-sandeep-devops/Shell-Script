@@ -10,4 +10,4 @@ echo $SUM
 
 FRUITS=("ORANGES" "APPLES" "MANGO")
 
-echo ${FRUITS[$@]}
+echo ${FRUITS[@]}
