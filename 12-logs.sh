@@ -2,6 +2,7 @@
 
 USERID=$(id -u)
 LOG_FOLDER="/var/log/shell-script"
+LOG_FILE="/var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
     echo "Please run this command with root user:"
@@ -17,8 +18,8 @@ VALIDATE(){
     fi
 }
 
-dnf install nginx -y  &>> 
+dnf install nginx -y  &>> $LOG_FILE
 VALIDATE $? "Nginx installation"
 
-dnf install maven -y
+dnf install maven -y &>> $LOG_FILE
 VALIDATE $? "Maven installation"
