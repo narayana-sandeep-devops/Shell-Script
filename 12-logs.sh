@@ -13,9 +13,9 @@ mkdir -p $LOG_FOLDER
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "$2: Failure"
+        echo "$2: Failure" | tee -a $LOG_FILE
     else
-        echo "$2: Success"
+        echo "$2: Success" | tee -a $LOG_FILE
     fi
 }
 
