@@ -5,7 +5,7 @@ LOG_FOLDER="/var/log/shell-script"
 LOG_FILE="/var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
-    echo "Please run this command with root user:"
+    echo "Please run this command with root user:" | tee -a $LOG_FILE
     exit 1
 fi
 
