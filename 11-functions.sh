@@ -16,7 +16,7 @@ VALIDATE(){
     fi
 }
 
-dnf install nginx -y
+dnf install nginx -y  &>> 
 VALIDATE $? "Nginx installation"
 
 dnf install maven -y
