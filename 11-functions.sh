@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$(id-u)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
     echo "Please run this command with root user:"
@@ -18,9 +18,6 @@ VALIDATE(){
 
 dnf install nginx -y
 VALIDATE $? "Nginx installation"
-
-dnf install git -y
-VALIDATE $? "Git installation"
 
 dnf install maven -y
 VALIDATE $? "Maven installation"
